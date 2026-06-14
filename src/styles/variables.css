@@ -1,0 +1,28 @@
+:root {
+
+  --primary-green: #0B6E4F;
+  --primary-yellow: #F2C94C;
+
+  --accent-red: #C1121F;
+  --accent-gold: #D4AF37;
+
+  --white: #FFFFFF;
+  --black: #111827;
+
+  --gray-100: #F9FAFB;
+  --gray-200: #E5E7EB;
+  --gray-500: #6B7280;
+  --gray-900: #111827;
+
+  --font-heading: "Poppins", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --shadow-soft: 0 8px 24px rgba(0,0,0,.08);
+
+  --max-width: 1280px;
+
+}
