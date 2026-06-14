@@ -1,0 +1,16 @@
+.footer {
+  background: var(--gray-900);
+  color: var(--white);
+  padding: 28px 0;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer p {
+  margin: 0;
+}
