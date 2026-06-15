@@ -8,6 +8,7 @@ import { Link, useParams } from "react-router-dom";
 
 import { commonProjects } from "../../data/commonProjects";
 import { individualProjects } from "../../data/individualProjects";
+import { members } from "../../data/members";
 
 import "./ProjectDetails.css";
 
@@ -19,6 +20,9 @@ function ProjectDetails() {
 
   // Find selected project based on URL parameter
   const project = allProjects.find((item) => item.id === projectId);
+
+  // Find owner if the project belongs to an individual member
+  const owner = members.find((member) => member.id === project?.ownerId);
 
   // Handle invalid project URLs
   if (!project) {
@@ -58,11 +62,16 @@ function ProjectDetails() {
         <div className="project-details__section">
           <h2>Ownership</h2>
 
-          <p>
-            {project.ownerInitials
-              ? `Individual project by ${project.ownerInitials}`
-              : "Common team project"}
-          </p>
+          {project.type === "common" ? (
+            <p>Common team project</p>
+          ) : (
+            <p>
+              Individual project by{" "}
+              <Link to={`/members/${owner.id}`}>
+                {owner.name}
+              </Link>
+            </p>
+          )}
         </div>
 
         {/* Project Links */}

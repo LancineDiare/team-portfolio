@@ -45,3 +45,8 @@ Project Details Page
   color: var(--primary-green);
   font-weight: 700;
 }
+
+.project-details a {
+  color: var(--primary-green);
+  font-weight: 700;
+}
