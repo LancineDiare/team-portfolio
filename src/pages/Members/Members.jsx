@@ -1,21 +1,13 @@
+import { useTranslation } from "react-i18next";
+
 function Members() {
+  const { t } = useTranslation();
+
   return (
     <section className="page">
       <div className="container">
-        <h1>Team Members</h1>
-
-        <p>
-          Meet the talented BS-IT students behind our projects, innovations,
-          and collaborative achievements.
-        </p>
-
-        <ul>
-          <li>LD - Full Stack Developer</li>
-          <li>JA - Developer / Scrum Support</li>
-          <li>HG - Product Owner / QA Support</li>
-          <li>PD - Backend Developer</li>
-          <li>SG - QA Engineer</li>
-        </ul>
+        <h1>{t("pages.members.title")}</h1>
+        <p>{t("pages.members.description")}</p>
       </div>
     </section>
   );

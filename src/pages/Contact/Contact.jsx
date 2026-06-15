@@ -1,19 +1,13 @@
+import { useTranslation } from "react-i18next";
+
 function Contact() {
+  const { t } = useTranslation();
+
   return (
     <section className="page">
       <div className="container">
-        <h1>Contact Us</h1>
-
-        <p>
-          Interested in collaborating, discussing technology, or learning more
-          about our projects? Get in touch with our team.
-        </p>
-
-        <div>
-          <p>Email: teamportfolio@example.com</p>
-          <p>GitHub: github.com/team-portfolio</p>
-          <p>LinkedIn: Coming Soon</p>
-        </div>
+        <h1>{t("pages.contact.title")}</h1>
+        <p>{t("pages.contact.description")}</p>
       </div>
     </section>
   );

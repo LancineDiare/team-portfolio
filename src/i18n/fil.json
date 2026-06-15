@@ -19,5 +19,32 @@
     "members": "Mga Miyembro",
     "projects": "Mga Proyekto",
     "methodology": "Development"
+  },
+  "pages": {
+  "about": {
+    "title": "Tungkol sa Amin",
+    "description": "Kami ay mga BS-IT student na gumagawa ng real-world projects gamit ang Agile methodology."
+  },
+  "members": {
+    "title": "Mga Miyembro",
+    "description": "Kilalanin ang mga BS-IT student sa likod ng aming mga proyekto, inobasyon, at collaborative achievements."
+  },
+  "commonProjects": {
+    "title": "Mga Proyektong Panggrupo",
+    "description": "Mga proyektong ginawa ng team gamit ang Agile methodologies, modern technologies, at industry best practices."
+  },
+  "individualProjects": {
+    "title": "Mga Indibidwal na Proyekto",
+    "description": "Tingnan ang personal projects, portfolios, experiments, at innovations ng bawat miyembro."
+  },
+  "contact": {
+    "title": "Kontakin Kami",
+    "description": "Interesado ka bang makipag-collaborate, pag-usapan ang technology, o malaman pa ang aming projects? Makipag-ugnayan sa aming team."
   }
+},
+"footer": {
+  "copyright": "BSIT Team Portfolio.",
+  "built": "Ginawa gamit ang React, Agile, teamwork, at continuous learning."
+}
+
 }

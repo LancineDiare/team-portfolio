@@ -19,5 +19,31 @@
     "members": "Team Members",
     "projects": "Projects",
     "methodology": "Development"
+  },
+  "pages": {
+    "about": {
+      "title": "About Us",
+      "description": "We are BS-IT students building real-world projects with Agile methodology."
+    },
+    "members": {
+      "title": "Team Members",
+      "description": "Meet the talented BS-IT students behind our projects, innovations, and collaborative achievements."
+    },
+    "commonProjects": {
+      "title": "Common Projects",
+      "description": "Projects developed collaboratively by the team using Agile methodologies, modern technologies, and industry best practices."
+    },
+    "individualProjects": {
+      "title": "Individual Projects",
+      "description": "Explore personal projects, portfolios, experiments, and innovations created by each team member."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "description": "Interested in collaborating, discussing technology, or learning more about our projects? Get in touch with our team."
+    }
+  },
+  "footer": {
+    "copyright": "BSIT Team Portfolio.",
+    "built": "Built with React, Agile, teamwork, and continuous learning."
   }
 }

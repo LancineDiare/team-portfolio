@@ -1,11 +1,14 @@
+import { useTranslation } from "react-i18next";
 import "./Footer.css";
 
 function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="footer">
       <div className="container footer__inner">
-        <p>© {new Date().getFullYear()} BSIT Team Portfolio.</p>
-        <p>Built with React, Agile, teamwork, and continuous learning.</p>
+        <p>© {new Date().getFullYear()} {t("footer.copyright")}</p>
+        <p>{t("footer.built")}</p>
       </div>
     </footer>
   );
