@@ -1,0 +1,47 @@
+/*
+========================================
+Project Details Page
+========================================
+*/
+
+.project-details {
+  background: white;
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.project-details__category {
+  display: inline-block;
+  margin-bottom: 16px;
+
+  color: var(--primary-green);
+  font-weight: 800;
+}
+
+.project-details__section {
+  margin-top: 32px;
+}
+
+.project-details__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.project-details__tags span {
+  background: var(--gray-100);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.project-details__links {
+  display: flex;
+  gap: 16px;
+}
+
+.project-details__links a {
+  color: var(--primary-green);
+  font-weight: 700;
+}

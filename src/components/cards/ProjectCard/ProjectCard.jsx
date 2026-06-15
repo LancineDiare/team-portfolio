@@ -7,6 +7,8 @@
 import PropTypes from "prop-types";
 import "./ProjectCard.css";
 
+import { Link } from "react-router-dom";
+
 function ProjectCard({ project }) {
   return (
     <article className="project-card">
@@ -25,10 +27,11 @@ function ProjectCard({ project }) {
       </div>
 
       {/* Project Links */}
-      <div className="project-card__links">
+    <div className="project-card__links">
+        <Link to={`/projects/${project.id}`}>View Details</Link>
         <a href={project.github}>GitHub</a>
         <a href={project.liveDemo}>Live Demo</a>
-      </div>
+    </div>
     </article>
   );
 }
