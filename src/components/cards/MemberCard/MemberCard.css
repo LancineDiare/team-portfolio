@@ -48,3 +48,24 @@ Member Card
 .specialization {
   color: var(--gray-500);
 }
+
+
+/*
+========================================
+Member Card Link
+========================================
+*/
+
+.member-card__link {
+  display: inline-block;
+  margin-top: 16px;
+
+  color: var(--primary-green);
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.member-card__link:hover {
+  text-decoration: underline;
+}

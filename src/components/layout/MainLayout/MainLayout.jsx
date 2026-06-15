@@ -11,6 +11,10 @@ import CommonProjects from "../../../pages/CommonProjects/CommonProjects";
 import IndividualProjects from "../../../pages/IndividualProjects/IndividualProjects";
 import Contact from "../../../pages/Contact/Contact";
 
+import MemberProfile from "../../../pages/MemberProfile/MemberProfile";
+
+<Route path="/members/:memberId" element={<MemberProfile />} />
+
 function MainLayout() {
   return (
     <>

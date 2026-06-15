@@ -7,6 +7,7 @@
 
 import "./MemberCard.css";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 function MemberCard({ member }) {
   return (
@@ -27,6 +28,14 @@ function MemberCard({ member }) {
       <p className="specialization">
         {member.specialization}
       </p>
+
+      {/* Portfolio Link */}
+      <Link
+        className="member-card__link"
+        to={`/members/${member.id}`}
+      >
+        View Profile
+      </Link>
 
     </article>
   );

@@ -1,0 +1,71 @@
+/*
+========================================
+Member Profile Page
+========================================
+*/
+
+.member-profile {
+  background: white;
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.member-profile__header {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.member-profile__avatar {
+  width: 100px;
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    var(--primary-green),
+    var(--accent-gold)
+  );
+
+  color: white;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.member-profile__role {
+  color: var(--primary-green);
+  font-weight: 700;
+}
+
+.member-profile__section {
+  margin-top: 32px;
+}
+
+.member-profile__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.member-profile__skills span {
+  background: var(--gray-100);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.member-profile__links {
+  display: flex;
+  gap: 16px;
+}
+
+.member-profile__links a {
+  color: var(--primary-green);
+  font-weight: 700;
+}

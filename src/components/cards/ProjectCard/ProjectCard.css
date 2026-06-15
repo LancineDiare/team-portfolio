@@ -1,0 +1,51 @@
+/*
+========================================
+Project Card
+========================================
+*/
+
+.project-card {
+  background: white;
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.project-card__category {
+  display: inline-block;
+  margin-bottom: 12px;
+
+  color: var(--primary-green);
+  font-weight: 700;
+}
+
+.project-card h3 {
+  margin-top: 0;
+}
+
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  margin-top: 18px;
+}
+
+.project-card__tags span {
+  background: var(--gray-100);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+.project-card__links {
+  display: flex;
+  gap: 16px;
+
+  margin-top: 20px;
+}
+
+.project-card__links a {
+  color: var(--primary-green);
+  font-weight: 700;
+}
