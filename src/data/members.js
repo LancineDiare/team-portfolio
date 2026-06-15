@@ -1,10 +1,19 @@
+/**
+ * Team Members Data
+ *
+ * Centralized source of team member information.
+ * Used by Members page and future profile pages.
+ */
+
 export const members = [
   {
     id: "ld",
     initials: "LD",
     name: "Lancine Diare",
     role: "Full Stack Developer",
-    color: "green",
+    specialization: "AI, Web Development, Cloud",
+    github: "#",
+    linkedin: "#",
   },
 
   {
@@ -12,7 +21,9 @@ export const members = [
     initials: "JA",
     name: "JA",
     role: "Developer",
-    color: "yellow",
+    specialization: "Frontend Development",
+    github: "#",
+    linkedin: "#",
   },
 
   {
@@ -20,7 +31,9 @@ export const members = [
     initials: "HG",
     name: "HG",
     role: "Product Owner",
-    color: "gold",
+    specialization: "Product Planning",
+    github: "#",
+    linkedin: "#",
   },
 
   {
@@ -28,7 +41,9 @@ export const members = [
     initials: "PD",
     name: "PD",
     role: "Backend Developer",
-    color: "red",
+    specialization: "Database & APIs",
+    github: "#",
+    linkedin: "#",
   },
 
   {
@@ -36,6 +51,8 @@ export const members = [
     initials: "SG",
     name: "SG",
     role: "QA Engineer",
-    color: "green",
+    specialization: "Testing & Validation",
+    github: "#",
+    linkedin: "#",
   },
 ];

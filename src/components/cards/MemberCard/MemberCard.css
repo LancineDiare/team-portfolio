@@ -1,0 +1,50 @@
+/*
+========================================
+Member Card
+========================================
+*/
+
+.member-card {
+  background: white;
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+
+  transition: transform .3s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+}
+
+.member-avatar {
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    var(--primary-green),
+    var(--accent-gold)
+  );
+
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+
+  margin-bottom: 16px;
+}
+
+.role {
+  color: var(--primary-green);
+  font-weight: 600;
+}
+
+.specialization {
+  color: var(--gray-500);
+}
