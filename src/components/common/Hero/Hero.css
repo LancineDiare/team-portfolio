@@ -1,0 +1,74 @@
+.hero {
+  padding: 100px 0;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(11,110,79,.08),
+      rgba(212,175,55,.08)
+    );
+}
+
+.hero__container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.hero__badge {
+  background: var(--primary-green);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 999px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 700px;
+}
+
+.hero__buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.btn-primary {
+  background: var(--primary-green);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
+}
+
+.btn-secondary {
+  background: white;
+  border: 2px solid var(--primary-green);
+  color: var(--primary-green);
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
+}
+
+.hero__stats {
+  display: grid;
+  gap: 20px;
+}
+
+.stat-card {
+  background: white;
+  padding: 25px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+@media (max-width: 900px) {
+  .hero__container {
+    grid-template-columns: 1fr;
+  }
+}

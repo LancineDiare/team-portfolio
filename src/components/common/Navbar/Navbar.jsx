@@ -1,15 +1,18 @@
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { navigation } from "../../../data/navigation";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 import "./Navbar.css";
 
 function Navbar() {
+  const { t } = useTranslation();
+
   return (
     <header className="navbar">
       <div className="container navbar__inner">
         <NavLink to="/" className="navbar__brand">
           <span className="navbar__logo">BSIT</span>
-          <span>Team Portfolio</span>
+          <span>{t("app.name")}</span>
         </NavLink>
 
         <nav className="navbar__links" aria-label="Main navigation">
@@ -21,7 +24,7 @@ function Navbar() {
                 isActive ? "navbar__link active" : "navbar__link"
               }
             >
-              {item.label}
+              {t(`nav.${item.key}`)}
             </NavLink>
           ))}
         </nav>

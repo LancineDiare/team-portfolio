@@ -1,0 +1,23 @@
+{
+  "app": {
+    "name": "BSIT Team Portfolio"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "members": "Members",
+    "commonProjects": "Common Projects",
+    "individualProjects": "Individual Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "BSIT Student Development Team",
+    "title": "Building Technology, Learning Together, Creating Impact.",
+    "subtitle": "We are a team of BSIT students passionate about software engineering, web development, cloud computing, databases, AI, and real-world problem solving.",
+    "exploreProjects": "Explore Projects",
+    "meetTeam": "Meet The Team",
+    "members": "Team Members",
+    "projects": "Projects",
+    "methodology": "Development"
+  }
+}

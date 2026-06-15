@@ -1,0 +1,23 @@
+{
+  "app": {
+    "name": "Portfolio de l'Équipe BSIT"
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "members": "Membres",
+    "commonProjects": "Projets communs",
+    "individualProjects": "Projets individuels",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Équipe de développement BSIT",
+    "title": "Construire la technologie, apprendre ensemble, créer de l'impact.",
+    "subtitle": "Nous sommes une équipe d'étudiants en BSIT passionnés par le génie logiciel, le développement web, le cloud computing, les bases de données, l'IA et la résolution de problèmes réels.",
+    "exploreProjects": "Explorer les projets",
+    "meetTeam": "Rencontrer l'équipe",
+    "members": "Membres de l'équipe",
+    "projects": "Projets",
+    "methodology": "Développement"
+  }
+}
