@@ -45,5 +45,13 @@
   "footer": {
     "copyright": "BSIT Team Portfolio.",
     "built": "Built with React, Agile, teamwork, and continuous learning."
-  }
+  },
+  "home": {
+  "featuredProjectsTitle": "Featured Projects",
+  "featuredProjectsDescription": "Explore selected team and individual projects.",
+  "viewAllProjects": "View All Projects",
+  "teamTitle": "Meet Our Team",
+  "teamDescription": "Five BS-IT students building and learning together.",
+  "viewTeam": "View Team"
+}
 }

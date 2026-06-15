@@ -6,6 +6,7 @@
  */
 
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import Hero from "../../components/common/Hero/Hero";
 import MemberCard from "../../components/cards/MemberCard/MemberCard";
@@ -18,6 +19,8 @@ import { individualProjects } from "../../data/individualProjects";
 import "./Home.css";
 
 function Home() {
+  const { t } = useTranslation();
+
   // Show only selected featured projects on the homepage
   const featuredProjects = [
     ...commonProjects.slice(0, 2),
@@ -36,11 +39,13 @@ function Home() {
           {/* Featured Projects Header */}
           <div className="home-section__header">
             <div>
-              <h2>Featured Projects</h2>
-              <p>Explore selected team and individual projects.</p>
+              <h2>{t("home.featuredProjectsTitle")}</h2>
+              <p>{t("home.featuredProjectsDescription")}</p>
             </div>
 
-            <Link to="/common-projects">View All Projects</Link>
+            <Link to="/common-projects">
+              {t("home.viewAllProjects")}
+            </Link>
           </div>
 
           {/* Featured Projects Grid */}
@@ -57,11 +62,13 @@ function Home() {
           {/* Team Preview Header */}
           <div className="home-section__header">
             <div>
-              <h2>Meet Our Team</h2>
-              <p>Five BS-IT students building and learning together.</p>
+              <h2>{t("home.teamTitle")}</h2>
+              <p>{t("home.teamDescription")}</p>
             </div>
 
-            <Link to="/members">View Team</Link>
+            <Link to="/members">
+              {t("home.viewTeam")}
+            </Link>
           </div>
 
           {/* Team Members Grid */}

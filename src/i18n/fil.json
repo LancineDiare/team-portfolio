@@ -45,6 +45,14 @@
 "footer": {
   "copyright": "BSIT Team Portfolio.",
   "built": "Ginawa gamit ang React, Agile, teamwork, at continuous learning."
+},
+"home": {
+  "featuredProjectsTitle": "Mga Tampok na Proyekto",
+  "featuredProjectsDescription": "Tingnan ang piling team at individual projects.",
+  "viewAllProjects": "Tingnan Lahat ng Proyekto",
+  "teamTitle": "Kilalanin ang Aming Team",
+  "teamDescription": "Limang BS-IT students na gumagawa at natututo nang sama-sama.",
+  "viewTeam": "Tingnan ang Team"
 }
 
 }
