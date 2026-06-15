@@ -1,0 +1,50 @@
+/*
+========================================
+Home Page
+========================================
+*/
+
+.home-section {
+  padding: 72px 0;
+}
+
+.home-section--light {
+  background: var(--gray-100);
+}
+
+.home-section__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.home-section__header h2 {
+  margin-bottom: 8px;
+}
+
+.home-section__header p {
+  margin: 0;
+  color: var(--gray-500);
+}
+
+.home-section__header a {
+  color: var(--primary-green);
+  font-weight: 800;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .home-section__header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

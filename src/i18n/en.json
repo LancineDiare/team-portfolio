@@ -1,0 +1,68 @@
+{
+  "app": {
+    "name": "BSIT Team Portfolio"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "members": "Members",
+    "commonProjects": "Common Projects",
+    "individualProjects": "Individual Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "BSIT Student Development Team",
+    "title": "Building Technology, Learning Together, Creating Impact.",
+    "subtitle": "We are a team of BSIT students passionate about software engineering, web development, cloud computing, databases, AI, and real-world problem solving.",
+    "exploreProjects": "Explore Projects",
+    "meetTeam": "Meet The Team",
+    "members": "Team Members",
+    "projects": "Projects",
+    "methodology": "Development"
+  },
+  "pages": {
+    "about": {
+      "title": "About Us",
+      "description": "We are BS-IT students building real-world projects with Agile methodology."
+    },
+    "members": {
+      "title": "Team Members",
+      "description": "Meet the talented BS-IT students behind our projects, innovations, and collaborative achievements."
+    },
+    "commonProjects": {
+      "title": "Common Projects",
+      "description": "Projects developed collaboratively by the team using Agile methodologies, modern technologies, and industry best practices."
+    },
+    "individualProjects": {
+      "title": "Individual Projects",
+      "description": "Explore personal projects, portfolios, experiments, and innovations created by each team member."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "description": "Interested in collaborating, discussing technology, or learning more about our projects? Get in touch with our team."
+    }
+  },
+  "footer": {
+    "copyright": "BSIT Team Portfolio.",
+    "built": "Built with React, Agile, teamwork, and continuous learning."
+  },
+  "home": {
+  "featuredProjectsTitle": "Featured Projects",
+  "featuredProjectsDescription": "Explore selected team and individual projects.",
+  "viewAllProjects": "View All Projects",
+  "teamTitle": "Meet Our Team",
+  "teamDescription": "Five BS-IT students building and learning together.",
+  "viewTeam": "View Team"
+},
+"buttons": {
+  "viewProfile": "View Profile",
+  "viewDetails": "View Details",
+  "github": "GitHub",
+  "liveDemo": "Live Demo"
+},
+"projectOwnership": {
+  "common": "Common team project",
+  "individualBy": "Individual project by"
+}
+
+}

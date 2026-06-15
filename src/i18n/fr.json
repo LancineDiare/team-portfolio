@@ -1,0 +1,68 @@
+{
+  "app": {
+    "name": "Portfolio de l'Équipe BSIT"
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "members": "Membres",
+    "commonProjects": "Projets communs",
+    "individualProjects": "Projets individuels",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Équipe de développement BSIT",
+    "title": "Construire la technologie, apprendre ensemble, créer de l'impact.",
+    "subtitle": "Nous sommes une équipe d'étudiants en BSIT passionnés par le génie logiciel, le développement web, le cloud computing, les bases de données, l'IA et la résolution de problèmes réels.",
+    "exploreProjects": "Explorer les projets",
+    "meetTeam": "Rencontrer l'équipe",
+    "members": "Membres de l'équipe",
+    "projects": "Projets",
+    "methodology": "Développement"
+  },
+  "pages": {
+  "about": {
+    "title": "À propos de nous",
+    "description": "Nous sommes des étudiants en BS-IT qui construisent des projets réels avec la méthodologie Agile."
+  },
+  "members": {
+    "title": "Membres de l'équipe",
+    "description": "Découvrez les étudiants BS-IT talentueux derrière nos projets, innovations et réalisations collaboratives."
+  },
+  "commonProjects": {
+    "title": "Projets communs",
+    "description": "Projets développés en collaboration par l'équipe avec les méthodes Agile, les technologies modernes et les bonnes pratiques professionnelles."
+  },
+  "individualProjects": {
+    "title": "Projets individuels",
+    "description": "Explorez les projets personnels, portfolios, expérimentations et innovations créés par chaque membre de l'équipe."
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "description": "Vous souhaitez collaborer, discuter de technologie ou en savoir plus sur nos projets ? Contactez notre équipe."
+  }
+},
+"footer": {
+  "copyright": "Portfolio de l'Équipe BSIT.",
+  "built": "Développé avec React, Agile, le travail d'équipe et l'apprentissage continu."
+},
+"home": {
+  "featuredProjectsTitle": "Projets en vedette",
+  "featuredProjectsDescription": "Découvrez une sélection de projets d'équipe et de projets individuels.",
+  "viewAllProjects": "Voir tous les projets",
+  "teamTitle": "Rencontrez notre équipe",
+  "teamDescription": "Cinq étudiants BS-IT qui construisent et apprennent ensemble.",
+  "viewTeam": "Voir l'équipe"
+},
+"buttons": {
+  "viewProfile": "Voir le profil",
+  "viewDetails": "Voir les détails",
+  "github": "GitHub",
+  "liveDemo": "Démo en ligne"
+},
+"projectOwnership": {
+  "common": "Projet commun de l'équipe",
+  "individualBy": "Projet individuel par"
+}
+  
+}

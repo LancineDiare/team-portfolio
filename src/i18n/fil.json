@@ -1,0 +1,68 @@
+{
+  "app": {
+    "name": "BSIT Team Portfolio"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "Tungkol sa Amin",
+    "members": "Mga Miyembro",
+    "commonProjects": "Mga Proyektong Panggrupo",
+    "individualProjects": "Mga Indibidwal na Proyekto",
+    "contact": "Kontak"
+  },
+  "hero": {
+    "badge": "BSIT Student Development Team",
+    "title": "Gumagawa ng Teknolohiya, Natututo Nang Sama-sama, Lumilikha ng Epekto.",
+    "subtitle": "Kami ay isang pangkat ng mga BSIT student na interesado sa software engineering, web development, cloud computing, databases, AI, at paglutas ng totoong problema.",
+    "exploreProjects": "Tingnan ang mga Proyekto",
+    "meetTeam": "Kilalanin ang Team",
+    "members": "Mga Miyembro",
+    "projects": "Mga Proyekto",
+    "methodology": "Development"
+  },
+  "pages": {
+  "about": {
+    "title": "Tungkol sa Amin",
+    "description": "Kami ay mga BS-IT student na gumagawa ng real-world projects gamit ang Agile methodology."
+  },
+  "members": {
+    "title": "Mga Miyembro",
+    "description": "Kilalanin ang mga BS-IT student sa likod ng aming mga proyekto, inobasyon, at collaborative achievements."
+  },
+  "commonProjects": {
+    "title": "Mga Proyektong Panggrupo",
+    "description": "Mga proyektong ginawa ng team gamit ang Agile methodologies, modern technologies, at industry best practices."
+  },
+  "individualProjects": {
+    "title": "Mga Indibidwal na Proyekto",
+    "description": "Tingnan ang personal projects, portfolios, experiments, at innovations ng bawat miyembro."
+  },
+  "contact": {
+    "title": "Kontakin Kami",
+    "description": "Interesado ka bang makipag-collaborate, pag-usapan ang technology, o malaman pa ang aming projects? Makipag-ugnayan sa aming team."
+  }
+},
+"footer": {
+  "copyright": "BSIT Team Portfolio.",
+  "built": "Ginawa gamit ang React, Agile, teamwork, at continuous learning."
+},
+"home": {
+  "featuredProjectsTitle": "Mga Tampok na Proyekto",
+  "featuredProjectsDescription": "Tingnan ang piling team at individual projects.",
+  "viewAllProjects": "Tingnan Lahat ng Proyekto",
+  "teamTitle": "Kilalanin ang Aming Team",
+  "teamDescription": "Limang BS-IT students na gumagawa at natututo nang sama-sama.",
+  "viewTeam": "Tingnan ang Team"
+},
+"buttons": {
+  "viewProfile": "Tingnan ang Profile",
+  "viewDetails": "Tingnan ang Detalye",
+  "github": "GitHub",
+  "liveDemo": "Live Demo"
+},
+"projectOwnership": {
+  "common": "Team project",
+  "individualBy": "Individual project ni"
+}
+
+}
