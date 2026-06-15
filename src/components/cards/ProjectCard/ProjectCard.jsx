@@ -5,11 +5,14 @@
  */
 
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 import "./ProjectCard.css";
 
-import { Link } from "react-router-dom";
-
 function ProjectCard({ project }) {
+  const { t } = useTranslation();
+
   return (
     <article className="project-card">
       {/* Project Category */}
@@ -27,17 +30,18 @@ function ProjectCard({ project }) {
       </div>
 
       {/* Project Links */}
-    <div className="project-card__links">
-        <Link to={`/projects/${project.id}`}>View Details</Link>
-        <a href={project.github}>GitHub</a>
-        <a href={project.liveDemo}>Live Demo</a>
-    </div>
+      <div className="project-card__links">
+        <Link to={`/projects/${project.id}`}>{t("buttons.viewDetails")}</Link>
+        <a href={project.github}>{t("buttons.github")}</a>
+        <a href={project.liveDemo}>{t("buttons.liveDemo")}</a>
+      </div>
     </article>
   );
 }
 
 ProjectCard.propTypes = {
   project: PropTypes.shape({
+    id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,

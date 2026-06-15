@@ -53,6 +53,16 @@
   "teamTitle": "Kilalanin ang Aming Team",
   "teamDescription": "Limang BS-IT students na gumagawa at natututo nang sama-sama.",
   "viewTeam": "Tingnan ang Team"
+},
+"buttons": {
+  "viewProfile": "Tingnan ang Profile",
+  "viewDetails": "Tingnan ang Detalye",
+  "github": "GitHub",
+  "liveDemo": "Live Demo"
+},
+"projectOwnership": {
+  "common": "Team project",
+  "individualBy": "Individual project ni"
 }
 
 }

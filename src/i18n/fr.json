@@ -53,6 +53,16 @@
   "teamTitle": "Rencontrez notre équipe",
   "teamDescription": "Cinq étudiants BS-IT qui construisent et apprennent ensemble.",
   "viewTeam": "Voir l'équipe"
+},
+"buttons": {
+  "viewProfile": "Voir le profil",
+  "viewDetails": "Voir les détails",
+  "github": "GitHub",
+  "liveDemo": "Démo en ligne"
+},
+"projectOwnership": {
+  "common": "Projet commun de l'équipe",
+  "individualBy": "Projet individuel par"
 }
   
 }

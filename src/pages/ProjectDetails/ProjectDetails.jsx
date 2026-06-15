@@ -5,6 +5,7 @@
  */
 
 import { Link, useParams } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import { commonProjects } from "../../data/commonProjects";
 import { individualProjects } from "../../data/individualProjects";
@@ -14,17 +15,18 @@ import "./ProjectDetails.css";
 
 function ProjectDetails() {
   const { projectId } = useParams();
+  const { t } = useTranslation();
 
-  // Merge all project sources into one searchable list
+  // Merge common and individual project data into one searchable array
   const allProjects = [...commonProjects, ...individualProjects];
 
-  // Find selected project based on URL parameter
+  // Find the selected project based on the dynamic URL parameter
   const project = allProjects.find((item) => item.id === projectId);
 
-  // Find owner if the project belongs to an individual member
+  // Find the project owner when the project belongs to an individual member
   const owner = members.find((member) => member.id === project?.ownerId);
 
-  // Handle invalid project URLs
+  // Display fallback content if the project ID does not exist
   if (!project) {
     return (
       <section className="page">
@@ -41,7 +43,9 @@ function ProjectDetails() {
     <section className="page">
       <div className="container project-details">
         {/* Project Header */}
-        <span className="project-details__category">{project.category}</span>
+        <span className="project-details__category">
+          {project.category}
+        </span>
 
         <h1>{project.title}</h1>
 
@@ -63,13 +67,17 @@ function ProjectDetails() {
           <h2>Ownership</h2>
 
           {project.type === "common" ? (
-            <p>Common team project</p>
+            <p>{t("projectOwnership.common")}</p>
           ) : (
             <p>
-              Individual project by{" "}
-              <Link to={`/members/${owner.id}`}>
-                {owner.name}
-              </Link>
+              {t("projectOwnership.individualBy")}{" "}
+              {owner ? (
+                <Link to={`/members/${owner.id}`}>
+                  {owner.name}
+                </Link>
+              ) : (
+                "Unknown Owner"
+              )}
             </p>
           )}
         </div>
@@ -79,8 +87,13 @@ function ProjectDetails() {
           <h2>Links</h2>
 
           <div className="project-details__links">
-            <a href={project.github}>GitHub</a>
-            <a href={project.liveDemo}>Live Demo</a>
+            <a href={project.github}>
+              {t("buttons.github")}
+            </a>
+
+            <a href={project.liveDemo}>
+              {t("buttons.liveDemo")}
+            </a>
           </div>
         </div>
       </div>

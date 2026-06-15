@@ -1,49 +1,38 @@
 /**
  * Member Card Component
  *
- * Reusable component displaying
- * team member information.
+ * Reusable component displaying team member information.
  */
 
-import "./MemberCard.css";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
+import "./MemberCard.css";
 
 function MemberCard({ member }) {
+  const { t } = useTranslation();
+
   return (
     <article className="member-card">
-
       {/* Initials Avatar */}
-      <div className="member-avatar">
-        {member.initials}
-      </div>
+      <div className="member-avatar">{member.initials}</div>
 
       {/* Member Information */}
       <h3>{member.name}</h3>
 
-      <p className="role">
-        {member.role}
-      </p>
+      <p className="role">{member.role}</p>
 
-      <p className="specialization">
-        {member.specialization}
-      </p>
+      <p className="specialization">{member.specialization}</p>
 
       {/* Portfolio Link */}
-      <Link
-        className="member-card__link"
-        to={`/members/${member.id}`}
-      >
-        View Profile
+      <Link className="member-card__link" to={`/members/${member.id}`}>
+        {t("buttons.viewProfile")}
       </Link>
-
     </article>
   );
 }
 
-/**
- * Component Prop Validation
- */
 MemberCard.propTypes = {
   member: PropTypes.shape({
     id: PropTypes.string,
