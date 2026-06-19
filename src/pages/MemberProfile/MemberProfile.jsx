@@ -175,14 +175,19 @@ const memberProjects = individualProjects.filter(
         <div className="member-profile__section">
           <h2>Resume</h2>
 
-          <a
-            href={member.resume}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="member-profile__resume-btn"
-          >
-            Download Resume
-          </a>
+          {member.resume ? (
+            <a
+              href={member.resume}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="member-profile__resume-btn"
+              download
+            >
+              Download Resume
+            </a>
+          ) : (
+            <p>No resume uploaded yet.</p>
+          )}
         </div>
 
         {/* Contact and Links */}
