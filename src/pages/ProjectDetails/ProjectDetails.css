@@ -50,3 +50,16 @@ Project Details Page
   color: var(--primary-green);
   font-weight: 700;
 }
+
+
+/*
+========================================
+Project Status
+========================================
+*/
+
+.project-details__status {
+  color: var(--accent-gold);
+  font-weight: 700;
+  margin: 8px 0;
+}

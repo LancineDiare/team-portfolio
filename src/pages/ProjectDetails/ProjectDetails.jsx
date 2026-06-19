@@ -23,9 +23,6 @@ function ProjectDetails() {
   // Find the selected project based on the dynamic URL parameter
   const project = allProjects.find((item) => item.id === projectId);
 
-  // Find the project owner when the project belongs to an individual member
-  const owner = members.find((member) => member.id === project?.ownerId);
-
   // Display fallback content if the project ID does not exist
   if (!project) {
     return (
@@ -39,6 +36,9 @@ function ProjectDetails() {
     );
   }
 
+  // Find the project owner when the project belongs to an individual member
+  const owner = members.find((member) => member.id === project.ownerId);
+
   return (
     <section className="page">
       <div className="container project-details">
@@ -47,9 +47,45 @@ function ProjectDetails() {
           {project.category}
         </span>
 
+        {/* Project Status */}
+        {project.status && (
+          <p className="project-details__status">
+            Status: {project.status}
+          </p>
+        )}
+
         <h1>{project.title}</h1>
 
         <p>{project.description}</p>
+
+        {/* Problem */}
+        {project.problem && (
+          <div className="project-details__section">
+            <h2>Problem</h2>
+            <p>{project.problem}</p>
+          </div>
+        )}
+
+        {/* Solution */}
+        {project.solution && (
+          <div className="project-details__section">
+            <h2>Solution</h2>
+            <p>{project.solution}</p>
+          </div>
+        )}
+
+        {/* Features */}
+        {project.features && (
+          <div className="project-details__section">
+            <h2>Features</h2>
+
+            <ul>
+              {project.features.map((feature) => (
+                <li key={feature}>{feature}</li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         {/* Project Technologies */}
         <div className="project-details__section">
