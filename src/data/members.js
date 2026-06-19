@@ -3,12 +3,14 @@
  *
  * Centralized source of team member information.
  */
+import ldPhoto from "../assets/images/profiles/ld.png";
 
 export const members = [
   {
   id: "ld",
   initials: "LD",
   name: "LD",
+  profileImage: ldPhoto,
   role: "Full Stack Developer",
   specialization: "AI, Web Development, Cloud, and Software Engineering",
 

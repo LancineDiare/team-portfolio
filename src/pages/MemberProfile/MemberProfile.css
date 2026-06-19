@@ -233,3 +233,20 @@ Member Profile Contact
 .member-profile__contact p {
   margin: 8px 0;
 }
+
+
+/*
+========================================
+Member Profile Photo
+========================================
+*/
+
+.member-profile__photo {
+  width: 100px;
+  height: 100px;
+
+  object-fit: cover;
+  border-radius: 50%;
+
+  border: 4px solid var(--primary-green);
+}

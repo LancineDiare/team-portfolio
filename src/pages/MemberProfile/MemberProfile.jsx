@@ -52,7 +52,18 @@ const memberProjects = individualProjects.filter(
       <div className="container member-profile">
         {/* Profile Header */}
         <div className="member-profile__header">
-          <div className="member-profile__avatar">{member.initials}</div>
+          {/* Profile Avatar / Image */}
+          {member.profileImage ? (
+            <img
+              src={member.profileImage}
+              alt={`${member.name} profile`}
+              className="member-profile__photo"
+            />
+          ) : (
+            <div className="member-profile__avatar">
+              {member.initials}
+            </div>
+          )}
 
           <div>
             <h1>{member.name}</h1>
