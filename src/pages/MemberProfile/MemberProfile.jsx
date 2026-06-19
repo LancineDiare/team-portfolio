@@ -174,13 +174,29 @@ const memberProjects = individualProjects.filter(
           </a>
         </div>
 
-        {/* Links */}
+        {/* Contact and Links */}
         <div className="member-profile__section">
-          <h2>Links</h2>
+          <h2>Contact and Links</h2>
+
+          <div className="member-profile__contact">
+            <p>
+              <strong>Email:</strong> {member.email || "Not available yet"}
+            </p>
+
+            <p>
+              <strong>Location:</strong> {member.location || "Not available yet"}
+            </p>
+
+            <p>
+              <strong>Availability:</strong>{" "}
+              {member.availability || "Not available yet"}
+            </p>
+          </div>
 
           <div className="member-profile__links">
             <a href={member.github}>GitHub</a>
             <a href={member.linkedin}>LinkedIn</a>
+            <a href={member.portfolio}>Portfolio</a>
           </div>
         </div>
       </div>

@@ -215,3 +215,21 @@ Member Profile Projects
   color: var(--primary-green);
   font-weight: 700;
 }
+
+
+/*
+========================================
+Member Profile Contact
+========================================
+*/
+
+.member-profile__contact {
+  background: var(--gray-100);
+  padding: 20px;
+  border-radius: var(--radius-md);
+  margin-bottom: 20px;
+}
+
+.member-profile__contact p {
+  margin: 8px 0;
+}

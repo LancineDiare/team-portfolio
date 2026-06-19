@@ -50,7 +50,10 @@ export const members = [
   github: "#",
   linkedin: "#",
   portfolio: "#",
-  resume: "/src/assets/resumes/ld-resume.pdf"
+  resume: "/src/assets/resumes/ld-resume.pdf",
+  email: "placeholder@example.com",
+  location: "Location Placeholder",
+  availability: "Open to collaboration, internships, freelance projects, and software development opportunities"
 },
   {
     id: "ja",
