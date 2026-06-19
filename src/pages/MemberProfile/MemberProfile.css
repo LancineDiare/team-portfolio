@@ -185,3 +185,33 @@ Member Profile Timeline
   color: var(--accent-gold);
   font-weight: 700;
 }
+
+
+/*
+========================================
+Member Profile Projects
+========================================
+*/
+
+.member-profile__projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+  gap: 20px;
+}
+
+.member-profile__project-card {
+  background: var(--gray-100);
+  padding: 20px;
+  border-radius: var(--radius-md);
+}
+
+.member-profile__project-card span {
+  color: var(--accent-gold);
+  font-weight: 800;
+}
+
+.member-profile__project-card a {
+  color: var(--primary-green);
+  font-weight: 700;
+}

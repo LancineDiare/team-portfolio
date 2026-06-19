@@ -10,6 +10,7 @@ import { members } from "../../data/members";
 import { skills } from "../../data/skills";
 import { certifications } from "../../data/certifications";
 import { timeline } from "../../data/timeline";
+import { individualProjects } from "../../data/individualProjects";
 
 import "./MemberProfile.css";
 
@@ -38,6 +39,11 @@ function MemberProfile() {
   const memberCertifications = certifications.filter(
     (certification) => certification.ownerId === memberId
   );
+
+  // Get individual projects owned by selected member
+const memberProjects = individualProjects.filter(
+  (project) => project.ownerId === memberId
+);
 
   const memberTimeline = timeline.filter((item) => item.ownerId === memberId); // for projects
 
@@ -108,6 +114,29 @@ function MemberProfile() {
             </div>
           ) : (
             <p>No certifications added yet.</p>
+          )}
+        </div>
+
+        {/* Individual Projects */}
+        <div className="member-profile__section">
+          <h2>Individual Projects</h2>
+
+          {memberProjects.length > 0 ? (
+            <div className="member-profile__projects">
+              {memberProjects.map((project) => (
+                <article className="member-profile__project-card" key={project.id}>
+                  <span>{project.status}</span>
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+
+                  <Link to={`/projects/${project.id}`}>
+                    View Project Details
+                  </Link>
+                </article>
+              ))}
+            </div>
+          ) : (
+            <p>No individual projects added yet.</p>
           )}
         </div>
 
