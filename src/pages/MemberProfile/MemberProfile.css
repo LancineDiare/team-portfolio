@@ -122,3 +122,30 @@ Member Profile Certifications
   color: var(--primary-green);
   font-weight: 700;
 }
+
+
+/*
+========================================
+Resume Button
+========================================
+*/
+
+.member-profile__resume-btn {
+  display: inline-block;
+
+  padding: 12px 20px;
+
+  border-radius: 8px;
+
+  background: var(--primary-green);
+
+  color: white;
+
+  text-decoration: none;
+
+  font-weight: 700;
+}
+
+.member-profile__resume-btn:hover {
+  opacity: 0.9;
+}

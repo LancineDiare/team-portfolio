@@ -50,7 +50,7 @@ export const members = [
   github: "#",
   linkedin: "#",
   portfolio: "#",
-  resume: "#"
+  resume: "/src/assets/resumes/ld-resume.pdf"
 },
   {
     id: "ja",

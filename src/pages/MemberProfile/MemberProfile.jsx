@@ -108,6 +108,20 @@ function MemberProfile() {
           )}
         </div>
 
+        {/* Resume */}
+        <div className="member-profile__section">
+          <h2>Resume</h2>
+
+          <a
+            href={member.resume}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="member-profile__resume-btn"
+          >
+            Download Resume
+          </a>
+        </div>
+
         {/* Links */}
         <div className="member-profile__section">
           <h2>Links</h2>
