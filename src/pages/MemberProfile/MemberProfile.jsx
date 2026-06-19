@@ -2,21 +2,25 @@
  * Member Profile Page
  *
  * Dynamic page for each team member.
- * URL example: /members/ld
  */
 
 import { Link, useParams } from "react-router-dom";
+
 import { members } from "../../data/members";
+import { skills } from "../../data/skills";
 
 import "./MemberProfile.css";
 
 function MemberProfile() {
   const { memberId } = useParams();
 
-  // Find selected member based on URL parameter
+  // Find selected member from URL parameter
   const member = members.find((item) => item.id === memberId);
 
-  // Handle invalid member profile URLs
+  // Get skills owned by selected member
+  const memberSkills = skills.filter((skill) => skill.ownerId === memberId);
+
+  // Handle invalid member URLs
   if (!member) {
     return (
       <section className="page">
@@ -43,21 +47,36 @@ function MemberProfile() {
           </div>
         </div>
 
-        {/* Biography */}
+        {/* About */}
         <div className="member-profile__section">
           <h2>About</h2>
-          <p>{member.bio}</p>
+          <p>{member.profileSummary || member.bio}</p>
         </div>
 
         {/* Skills */}
         <div className="member-profile__section">
           <h2>Skills</h2>
 
-          <div className="member-profile__skills">
-            {member.skills.map((skill) => (
-              <span key={skill}>{skill}</span>
-            ))}
-          </div>
+          {memberSkills.length > 0 ? (
+            <div className="member-profile__skills-grid">
+              {memberSkills.map((skillGroup) => (
+                <div
+                  className="member-profile__skill-card"
+                  key={skillGroup.category}
+                >
+                  <h3>{skillGroup.category}</h3>
+
+                  <div className="member-profile__skills">
+                    {skillGroup.items.map((skill) => (
+                      <span key={skill}>{skill}</span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p>No skills added yet.</p>
+          )}
         </div>
 
         {/* Links */}
