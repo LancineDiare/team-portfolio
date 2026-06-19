@@ -9,6 +9,7 @@ import { Link, useParams } from "react-router-dom";
 import { members } from "../../data/members";
 import { skills } from "../../data/skills";
 import { certifications } from "../../data/certifications";
+import { timeline } from "../../data/timeline";
 
 import "./MemberProfile.css";
 
@@ -37,6 +38,8 @@ function MemberProfile() {
   const memberCertifications = certifications.filter(
     (certification) => certification.ownerId === memberId
   );
+
+  const memberTimeline = timeline.filter((item) => item.ownerId === memberId); // for projects
 
   return (
     <section className="page">
@@ -105,6 +108,26 @@ function MemberProfile() {
             </div>
           ) : (
             <p>No certifications added yet.</p>
+          )}
+        </div>
+
+        {/* Timeline */}
+        <div className="member-profile__section">
+          <h2>Project Timeline</h2>
+
+          {memberTimeline.length > 0 ? (
+            <div className="member-profile__timeline">
+              {memberTimeline.map((item) => (
+                <article className="member-profile__timeline-item" key={item.title}>
+                  <span>{item.year}</span>
+                  <h3>{item.title}</h3>
+                  <p className="member-profile__timeline-type">{item.type}</p>
+                  <p>{item.description}</p>
+                </article>
+              ))}
+            </div>
+          ) : (
+            <p>No timeline added yet.</p>
           )}
         </div>
 
