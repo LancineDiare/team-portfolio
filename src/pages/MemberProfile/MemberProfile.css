@@ -93,3 +93,32 @@ Member Profile Skills
 .member-profile__skill-card h3 {
   margin-top: 0;
 }
+
+
+/*
+========================================
+Member Profile Certifications
+========================================
+*/
+
+.member-profile__certifications {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+  gap: 20px;
+}
+
+.member-profile__certification-card {
+  background: var(--gray-100);
+  padding: 20px;
+  border-radius: var(--radius-md);
+}
+
+.member-profile__certification-card h3 {
+  margin-top: 0;
+}
+
+.member-profile__certification-card a {
+  color: var(--primary-green);
+  font-weight: 700;
+}

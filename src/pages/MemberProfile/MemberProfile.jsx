@@ -8,6 +8,7 @@ import { Link, useParams } from "react-router-dom";
 
 import { members } from "../../data/members";
 import { skills } from "../../data/skills";
+import { certifications } from "../../data/certifications";
 
 import "./MemberProfile.css";
 
@@ -17,10 +18,7 @@ function MemberProfile() {
   // Find selected member from URL parameter
   const member = members.find((item) => item.id === memberId);
 
-  // Get skills owned by selected member
-  const memberSkills = skills.filter((skill) => skill.ownerId === memberId);
-
-  // Handle invalid member URLs
+  // Prevent blank page if member does not exist
   if (!member) {
     return (
       <section className="page">
@@ -32,6 +30,13 @@ function MemberProfile() {
       </section>
     );
   }
+
+  // Get related data after member is confirmed
+  const memberSkills = skills.filter((skill) => skill.ownerId === memberId);
+
+  const memberCertifications = certifications.filter(
+    (certification) => certification.ownerId === memberId
+  );
 
   return (
     <section className="page">
@@ -76,6 +81,30 @@ function MemberProfile() {
             </div>
           ) : (
             <p>No skills added yet.</p>
+          )}
+        </div>
+
+        {/* Certifications */}
+        <div className="member-profile__section">
+          <h2>Certifications</h2>
+
+          {memberCertifications.length > 0 ? (
+            <div className="member-profile__certifications">
+              {memberCertifications.map((certification) => (
+                <article
+                  className="member-profile__certification-card"
+                  key={certification.title}
+                >
+                  <h3>{certification.title}</h3>
+                  <p>{certification.issuer}</p>
+                  <p>{certification.date}</p>
+
+                  <a href={certification.credentialUrl}>View Credential</a>
+                </article>
+              ))}
+            </div>
+          ) : (
+            <p>No certifications added yet.</p>
           )}
         </div>
 
