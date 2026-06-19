@@ -11,30 +11,35 @@ export const commonProjects = [
     ownerId: "team",
     title: "Master Guesser",
     category: "Game / Web App",
+    status: "Completed",
     description:
       "A collaborative BS-IT project focused on logic, interaction, and user engagement.",
-    technologies: ["React", "JavaScript", "CSS"],
+    technologies: ["Python"],
     github: "#",
     liveDemo: "#",
   },
+
   {
     id: "chikamo",
     type: "common",
     ownerId: "team",
     title: "ChikaMo",
     category: "AI Translation Platform",
+    status: "MVP Released",
     description:
       "An AI-powered English-Filipino translation platform with speech, text, and learning features.",
     technologies: ["React", "PHP", "MySQL", "Hugging Face", "AI"],
     github: "#",
     liveDemo: "#",
   },
+
   {
     id: "pathfinder-ai",
     type: "common",
     ownerId: "team",
     title: "Pathfinder AI",
     category: "AI / Student Support",
+    status: "Prototype",
     description:
       "An AI-based academic and career guidance concept designed to support student decision-making.",
     technologies: ["AI", "Research", "Prototyping", "Agile"],
