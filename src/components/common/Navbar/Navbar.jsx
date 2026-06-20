@@ -11,7 +11,7 @@ function Navbar() {
     <header className="navbar">
       <div className="container navbar__inner">
         <NavLink to="/" className="navbar__brand">
-          <span className="navbar__logo">BSIT</span>
+          <span className="navbar__logo">TriTechPlus</span>
           <span>{t("app.name")}</span>
         </NavLink>
 

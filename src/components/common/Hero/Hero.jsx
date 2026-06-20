@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { FaGithub, FaUsers, FaCode } from "react-icons/fa";
 import "./Hero.css";
+import { Link } from "react-router-dom";
 
 function Hero() {
   const { t } = useTranslation();
@@ -16,9 +17,15 @@ function Hero() {
           <p>{t("hero.subtitle")}</p>
 
           <div className="hero__buttons">
-            <button className="btn-primary">{t("hero.exploreProjects")}</button>
-            <button className="btn-secondary">{t("hero.meetTeam")}</button>
+            <Link className="btn-primary" to="/common-projects">
+              {t("hero.exploreProjects")}
+            </Link>
+
+            <Link className="btn-secondary" to="/members">
+              {t("hero.meetTeam")}
+            </Link>
           </div>
+
         </div>
 
         <div className="hero__stats">
