@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "BSIT Team Portfolio"
+    "name": "TriTechPlus Team Portfolio"
   },
   "nav": {
     "home": "Home",
@@ -11,7 +11,7 @@
     "contact": "Contact"
   },
   "hero": {
-    "badge": "BSIT Student Development Team",
+    "badge": "TriTechPlus Student Development Team",
     "title": "Building Technology, Learning Together, Creating Impact.",
     "subtitle": "We are a team of BSIT students passionate about software engineering, web development, cloud computing, databases, AI, and real-world problem solving.",
     "exploreProjects": "Explore Projects",
@@ -23,11 +23,11 @@
   "pages": {
     "about": {
       "title": "About Us",
-      "description": "We are BS-IT students building real-world projects with Agile methodology."
+      "description": "We are TriTechPlus students building real-world projects with Agile methodology."
     },
     "members": {
       "title": "Team Members",
-      "description": "Meet the talented BS-IT students behind our projects, innovations, and collaborative achievements."
+      "description": "Meet the talented TriTechPlus students behind our projects, innovations, and collaborative achievements."
     },
     "commonProjects": {
       "title": "Common Projects",
@@ -43,7 +43,7 @@
     }
   },
   "footer": {
-    "copyright": "BSIT Team Portfolio.",
+    "copyright": "TriTechPlus Team Portfolio.",
     "built": "Built with React, Agile, teamwork, and continuous learning."
   },
   "home": {

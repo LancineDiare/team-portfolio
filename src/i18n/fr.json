@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "Portfolio de l'Équipe BSIT"
+    "name": "Portfolio de l'Équipe TriTechPlus"
   },
   "nav": {
     "home": "Accueil",
@@ -11,9 +11,9 @@
     "contact": "Contact"
   },
   "hero": {
-    "badge": "Équipe de développement BSIT",
+    "badge": "Équipe de développement TriTechPlus",
     "title": "Construire la technologie, apprendre ensemble, créer de l'impact.",
-    "subtitle": "Nous sommes une équipe d'étudiants en BSIT passionnés par le génie logiciel, le développement web, le cloud computing, les bases de données, l'IA et la résolution de problèmes réels.",
+    "subtitle": "Nous sommes une équipe d'étudiants en TriTechPlus passionnés par le génie logiciel, le développement web, le cloud computing, les bases de données, l'IA et la résolution de problèmes réels.",
     "exploreProjects": "Explorer les projets",
     "meetTeam": "Rencontrer l'équipe",
     "members": "Membres de l'équipe",
@@ -23,11 +23,11 @@
   "pages": {
   "about": {
     "title": "À propos de nous",
-    "description": "Nous sommes des étudiants en BS-IT qui construisent des projets réels avec la méthodologie Agile."
+    "description": "Nous sommes des étudiants en TriTechPlus qui construisent des projets réels avec la méthodologie Agile."
   },
   "members": {
     "title": "Membres de l'équipe",
-    "description": "Découvrez les étudiants BS-IT talentueux derrière nos projets, innovations et réalisations collaboratives."
+    "description": "Découvrez les étudiants TriTechPlus talentueux derrière nos projets, innovations et réalisations collaboratives."
   },
   "commonProjects": {
     "title": "Projets communs",
@@ -43,7 +43,7 @@
   }
 },
 "footer": {
-  "copyright": "Portfolio de l'Équipe BSIT.",
+  "copyright": "Portfolio de l'Équipe TriTechPlus.",
   "built": "Développé avec React, Agile, le travail d'équipe et l'apprentissage continu."
 },
 "home": {
@@ -51,7 +51,7 @@
   "featuredProjectsDescription": "Découvrez une sélection de projets d'équipe et de projets individuels.",
   "viewAllProjects": "Voir tous les projets",
   "teamTitle": "Rencontrez notre équipe",
-  "teamDescription": "Cinq étudiants BS-IT qui construisent et apprennent ensemble.",
+  "teamDescription": "Cinq étudiants TriTechPlus qui construisent et apprennent ensemble.",
   "viewTeam": "Voir l'équipe"
 },
 "buttons": {

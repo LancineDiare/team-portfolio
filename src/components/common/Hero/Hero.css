@@ -72,3 +72,10 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  text-decoration: none;
+}

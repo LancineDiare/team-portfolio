@@ -42,6 +42,102 @@ Home Page
   gap: 24px;
 }
 
+/*
+========================================
+Stats
+========================================
+*/
+
+.home-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 20px;
+}
+
+.home-stat-card {
+  background: white;
+  padding: 28px;
+
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.home-stat-card h2 {
+  color: var(--primary-green);
+  margin: 0;
+}
+
+.home-stat-card p {
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+/*
+========================================
+Technologies
+========================================
+*/
+
+.home-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 14px;
+}
+
+.home-tech-list span {
+  background: white;
+  color: var(--primary-green);
+
+  padding: 10px 16px;
+
+  border-radius: 999px;
+  box-shadow: var(--shadow-soft);
+
+  font-weight: 700;
+}
+
+/*
+========================================
+CTA
+========================================
+*/
+
+.home-cta {
+  padding: 80px 0;
+
+  background: linear-gradient(
+    135deg,
+    var(--primary-green),
+    var(--accent-gold)
+  );
+
+  color: white;
+}
+
+.home-cta__content {
+  text-align: center;
+}
+
+.home-cta__content p {
+  max-width: 700px;
+  margin: 0 auto 28px;
+}
+
+.home-cta__content a {
+  display: inline-block;
+
+  background: white;
+  color: var(--primary-green);
+
+  padding: 12px 22px;
+
+  border-radius: var(--radius-md);
+
+  font-weight: 800;
+}
+
 @media (max-width: 768px) {
   .home-section__header {
     align-items: flex-start;
