@@ -3,6 +3,8 @@
  *
  * Professional landing page for the BSIT Team Portfolio.
  */
+import LoadingSpinner from "../../components/common/LoadingSpinner/LoadingSpinner";
+import Skeleton from "../../components/common/Skeleton/Skeleton";
 
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -42,6 +44,12 @@ function Home() {
     "AI",
     "GitHub",
   ];
+
+  const isLoading = false;
+
+  if (isLoading) {
+    return <LoadingSpinner text="Loading portfolio..." />;
+  }
 
   return (
     <>

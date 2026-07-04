@@ -5,16 +5,27 @@ Member Profile Page
 */
 
 .member-profile {
-  background: white;
+  background: var(--surface-color);
+  color: var(--text-color);
+
   padding: 40px;
+
+  border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
+
   box-shadow: var(--shadow-soft);
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .member-profile__header {
   display: flex;
-  gap: 24px;
   align-items: center;
+
+  gap: 24px;
   margin-bottom: 40px;
 }
 
@@ -27,15 +38,27 @@ Member Profile Page
   justify-content: center;
 
   border-radius: 50%;
+
   background: linear-gradient(
     135deg,
     var(--primary-green),
     var(--accent-gold)
   );
 
-  color: white;
+  color: #ffffff;
+
   font-size: 2rem;
   font-weight: 800;
+}
+
+.member-profile__photo {
+  width: 100px;
+  height: 100px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+  border: 4px solid var(--primary-green);
 }
 
 .member-profile__role {
@@ -47,33 +70,42 @@ Member Profile Page
   margin-top: 32px;
 }
 
-.member-profile__skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
+.member-profile__section h2 {
+  color: var(--text-color);
 }
 
-.member-profile__skills span {
-  background: var(--gray-100);
-  padding: 8px 14px;
-  border-radius: 999px;
-  font-weight: 600;
+.member-profile__section p {
+  color: var(--muted-text-color);
 }
-
-.member-profile__links {
-  display: flex;
-  gap: 16px;
-}
-
-.member-profile__links a {
-  color: var(--primary-green);
-  font-weight: 700;
-}
-
 
 /*
 ========================================
-Member Profile Skills
+Reusable Inner Cards
+========================================
+*/
+
+.member-profile__skill-card,
+.member-profile__certification-card,
+.member-profile__timeline-item,
+.member-profile__project-card,
+.member-profile__contact {
+  background: var(--bg-color);
+  color: var(--text-color);
+
+  padding: 20px;
+
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/*
+========================================
+Skills
 ========================================
 */
 
@@ -84,20 +116,34 @@ Member Profile Skills
   gap: 20px;
 }
 
-.member-profile__skill-card {
-  background: var(--gray-100);
-  padding: 20px;
-  border-radius: var(--radius-md);
-}
-
 .member-profile__skill-card h3 {
   margin-top: 0;
+
+  color: var(--text-color);
 }
 
+.member-profile__skills {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 12px;
+}
+
+.member-profile__skills span {
+  background: var(--surface-color);
+  color: var(--text-color);
+
+  padding: 8px 14px;
+
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+
+  font-weight: 600;
+}
 
 /*
 ========================================
-Member Profile Certifications
+Certifications
 ========================================
 */
 
@@ -108,21 +154,16 @@ Member Profile Certifications
   gap: 20px;
 }
 
-.member-profile__certification-card {
-  background: var(--gray-100);
-  padding: 20px;
-  border-radius: var(--radius-md);
-}
-
 .member-profile__certification-card h3 {
   margin-top: 0;
+
+  color: var(--text-color);
 }
 
 .member-profile__certification-card a {
   color: var(--primary-green);
   font-weight: 700;
 }
-
 
 /*
 ========================================
@@ -135,40 +176,42 @@ Resume Button
 
   padding: 12px 20px;
 
-  border-radius: 8px;
-
   background: var(--primary-green);
+  color: #ffffff;
 
-  color: white;
+  border-radius: var(--radius-md);
 
   text-decoration: none;
 
   font-weight: 700;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
 }
 
 .member-profile__resume-btn:hover {
   opacity: 0.9;
+  transform: translateY(-2px);
 }
-
 
 /*
 ========================================
-Member Profile Timeline
+Timeline
 ========================================
 */
 
 .member-profile__timeline {
   display: grid;
+
   gap: 20px;
 
-  border-left: 4px solid var(--primary-green);
   padding-left: 24px;
+
+  border-left: 4px solid var(--primary-green);
 }
 
 .member-profile__timeline-item {
-  background: var(--gray-100);
-  padding: 20px;
-  border-radius: var(--radius-md);
   position: relative;
 }
 
@@ -179,6 +222,8 @@ Member Profile Timeline
 
 .member-profile__timeline-item h3 {
   margin-bottom: 4px;
+
+  color: var(--text-color);
 }
 
 .member-profile__timeline-type {
@@ -186,10 +231,9 @@ Member Profile Timeline
   font-weight: 700;
 }
 
-
 /*
 ========================================
-Member Profile Projects
+Projects
 ========================================
 */
 
@@ -200,15 +244,13 @@ Member Profile Projects
   gap: 20px;
 }
 
-.member-profile__project-card {
-  background: var(--gray-100);
-  padding: 20px;
-  border-radius: var(--radius-md);
-}
-
 .member-profile__project-card span {
   color: var(--accent-gold);
   font-weight: 800;
+}
+
+.member-profile__project-card h3 {
+  color: var(--text-color);
 }
 
 .member-profile__project-card a {
@@ -216,17 +258,13 @@ Member Profile Projects
   font-weight: 700;
 }
 
-
 /*
 ========================================
-Member Profile Contact
+Contact and Links
 ========================================
 */
 
 .member-profile__contact {
-  background: var(--gray-100);
-  padding: 20px;
-  border-radius: var(--radius-md);
   margin-bottom: 20px;
 }
 
@@ -234,19 +272,31 @@ Member Profile Contact
   margin: 8px 0;
 }
 
+.member-profile__links {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 16px;
+}
+
+.member-profile__links a {
+  color: var(--primary-green);
+  font-weight: 700;
+}
 
 /*
 ========================================
-Member Profile Photo
+Responsive
 ========================================
 */
 
-.member-profile__photo {
-  width: 100px;
-  height: 100px;
+@media (max-width: 768px) {
+  .member-profile {
+    padding: 28px;
+  }
 
-  object-fit: cover;
-  border-radius: 50%;
-
-  border: 4px solid var(--primary-green);
+  .member-profile__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

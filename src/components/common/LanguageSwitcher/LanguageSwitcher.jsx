@@ -1,3 +1,5 @@
+// team-portfolio\src\components\common\LanguageSwitcher\LanguageSwitcher.jsx
+
 import { useTranslation } from "react-i18next";
 import { LANGUAGES } from "../../../utils/constants";
 

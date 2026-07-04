@@ -1,5 +1,6 @@
-:root {
+/* src/styles/variables.css */
 
+:root {
   --primary-green: #0B6E4F;
   --primary-yellow: #F2C94C;
 
@@ -21,8 +22,42 @@
   --radius-md: 12px;
   --radius-lg: 20px;
 
-  --shadow-soft: 0 8px 24px rgba(0,0,0,.08);
+  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.08);
 
   --max-width: 1280px;
 
+  --bg-color: #F9FAFB;
+  --surface-color: #FFFFFF;
+  --text-color: #111827;
+  --muted-text-color: #6B7280;
+  --border-color: #E5E7EB;
+}
+
+/*
+========================================
+Dark Theme
+========================================
+*/
+
+[data-theme="dark"] {
+  --white: #111827;
+  --black: #F9FAFB;
+
+  --gray-100: #0F172A;
+  --gray-200: #1F2937;
+  --gray-500: #CBD5E1;
+  --gray-900: #F9FAFB;
+
+  --primary-green: #22C55E;
+  --primary-yellow: #FACC15;
+  --accent-red: #F87171;
+  --accent-gold: #FBBF24;
+
+  --bg-color: #0F172A;
+  --surface-color: #1E293B;
+  --text-color: #F9FAFB;
+  --muted-text-color: #CBD5E1;
+  --border-color: #334155;
+
+  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.35);
 }

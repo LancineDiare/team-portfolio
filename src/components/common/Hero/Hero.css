@@ -1,81 +1,231 @@
+/*
+========================================
+Hero Component
+========================================
+*/
+
 .hero {
   padding: 100px 0;
-  background:
-    linear-gradient(
-      135deg,
-      rgba(11,110,79,.08),
-      rgba(212,175,55,.08)
-    );
+
+  background: linear-gradient(
+    135deg,
+    rgba(11, 110, 79, 0.08),
+    rgba(212, 175, 55, 0.08)
+  );
+
+  transition: background-color 0.3s ease;
 }
+
+/*
+========================================
+Hero Layout
+========================================
+*/
 
 .hero__container {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  gap: 50px;
   align-items: center;
+
+  gap: 50px;
 }
+
+/*
+========================================
+Badge
+========================================
+*/
 
 .hero__badge {
-  background: var(--primary-green);
-  color: white;
-  padding: 8px 16px;
-  border-radius: 999px;
   display: inline-block;
-  margin-bottom: 20px;
+
+  margin-bottom: 24px;
+
+  padding: 8px 18px;
+
+  background: var(--primary-green);
+
+  color: #FFFFFF;
+
+  border-radius: 999px;
+
+  font-weight: 600;
 }
 
+/*
+========================================
+Typography
+========================================
+*/
+
 .hero h1 {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+
+  color: var(--text-color);
 }
 
 .hero p {
+  max-width: 720px;
+
   font-size: 1.1rem;
-  max-width: 700px;
+  line-height: 1.8;
+
+  color: var(--muted-text-color);
+
+  transition: color 0.3s ease;
 }
+
+/*
+========================================
+Buttons
+========================================
+*/
 
 .hero__buttons {
   display: flex;
-  gap: 15px;
-  margin-top: 30px;
+  flex-wrap: wrap;
+
+  gap: 16px;
+
+  margin-top: 36px;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 180px;
+
+  padding: 12px 26px;
+
+  border-radius: var(--radius-md);
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.2s ease;
 }
 
 .btn-primary {
   background: var(--primary-green);
-  color: white;
+
+  color: #FFFFFF;
+
   border: none;
-  padding: 12px 24px;
-  border-radius: var(--radius-md);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
 }
 
 .btn-secondary {
-  background: white;
-  border: 2px solid var(--primary-green);
+  background: var(--surface-color);
+
   color: var(--primary-green);
-  padding: 12px 24px;
-  border-radius: var(--radius-md);
+
+  border: 2px solid var(--primary-green);
 }
+
+.btn-secondary:hover {
+  background: var(--primary-green);
+
+  color: #FFFFFF;
+
+  transform: translateY(-2px);
+}
+
+/*
+========================================
+Statistics
+========================================
+*/
 
 .hero__stats {
   display: grid;
+
   gap: 20px;
 }
 
 .stat-card {
-  background: white;
-  padding: 25px;
+  background: var(--surface-color);
+
+  color: var(--text-color);
+
+  padding: 26px;
+
+  border: 1px solid var(--border-color);
+
   border-radius: var(--radius-lg);
+
   box-shadow: var(--shadow-soft);
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.25s ease;
 }
+
+.stat-card:hover {
+  transform: translateY(-4px);
+}
+
+.stat-card h3,
+.stat-card h2 {
+  margin-bottom: 10px;
+
+  color: var(--primary-green);
+}
+
+.stat-card p {
+  margin: 0;
+
+  color: var(--muted-text-color);
+}
+
+/*
+========================================
+Responsive
+========================================
+*/
 
 @media (max-width: 900px) {
+
+  .hero {
+    padding: 70px 0;
+  }
+
   .hero__container {
     grid-template-columns: 1fr;
+
+    gap: 40px;
   }
-}
 
+  .hero__buttons {
+    justify-content: center;
+  }
 
-.btn-primary,
-.btn-secondary {
-  display: inline-block;
-  text-decoration: none;
+  .hero h1 {
+    text-align: center;
+  }
+
+  .hero p {
+    text-align: center;
+
+    margin: 0 auto;
+  }
+
+  .hero__badge {
+    display: table;
+
+    margin: 0 auto 24px;
+  }
+
 }

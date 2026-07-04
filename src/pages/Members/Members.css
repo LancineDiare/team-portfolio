@@ -4,10 +4,107 @@ Members Page
 ========================================
 */
 
+.members-page {
+  padding: 48px 0;
+}
+
+/*
+========================================
+Page Header
+========================================
+*/
+
+.members-page__header {
+  text-align: center;
+
+  margin-bottom: 48px;
+}
+
+.members-page__title {
+  margin-bottom: 12px;
+
+  color: var(--text-color);
+}
+
+.members-page__description {
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  color: var(--muted-text-color);
+
+  line-height: 1.8;
+}
+
+/*
+========================================
+Members Grid
+========================================
+*/
+
 .members-grid {
   display: grid;
+
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 
   gap: 24px;
+
   margin-top: 40px;
+}
+
+/*
+========================================
+Empty State
+========================================
+*/
+
+.members-empty {
+  text-align: center;
+
+  padding: 80px 24px;
+
+  background: var(--surface-color);
+
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+
+  color: var(--muted-text-color);
+
+  box-shadow: var(--shadow-soft);
+}
+
+/*
+========================================
+Loading State
+========================================
+*/
+
+.members-loading {
+  text-align: center;
+
+  padding: 80px 24px;
+
+  color: var(--muted-text-color);
+}
+
+/*
+========================================
+Responsive
+========================================
+*/
+
+@media (max-width: 768px) {
+
+  .members-page {
+    padding: 32px 0;
+  }
+
+  .members-grid {
+    gap: 20px;
+  }
+
+  .members-page__header {
+    margin-bottom: 36px;
+  }
+
 }
