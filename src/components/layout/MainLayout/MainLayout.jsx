@@ -29,7 +29,7 @@ function MainLayout() {
     <>
       <Navbar />
 
-      <main>
+      <main className="fade-in">
         <Routes>
           {/* Main Pages */}
           <Route path="/" element={<Home />} />

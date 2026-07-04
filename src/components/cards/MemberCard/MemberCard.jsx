@@ -14,7 +14,7 @@ function MemberCard({ member }) {
   const { t } = useTranslation();
 
   return (
-    <article className="member-card">
+    <article className="member-card slide-up">
       {/* Initials Avatar */}
       <div className="member-avatar">{member.initials}</div>
 
