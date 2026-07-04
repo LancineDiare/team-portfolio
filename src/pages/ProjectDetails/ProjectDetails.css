@@ -63,3 +63,35 @@ Project Status
   font-weight: 700;
   margin: 8px 0;
 }
+
+
+/*
+========================================
+Project Images
+========================================
+*/
+
+.project-details__hero-image,
+.project-details__architecture-image {
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  margin: 24px 0;
+  background: var(--gray-100);
+}
+
+.project-details__gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 16px;
+}
+
+.project-details__gallery img {
+  width: 100%;
+  min-height: 180px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  background: var(--gray-100);
+}

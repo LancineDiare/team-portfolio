@@ -57,6 +57,14 @@ function ProjectDetails() {
         <h1>{project.title}</h1>
 
         <p>{project.description}</p>
+        {/* Project Hero Image */}
+        {project.heroImage && (
+          <img
+            src={project.heroImage}
+            alt={`${project.title} hero`}
+            className="project-details__hero-image"
+          />
+        )}
 
         {/* Problem */}
         {project.problem && (
@@ -84,6 +92,32 @@ function ProjectDetails() {
                 <li key={feature}>{feature}</li>
               ))}
             </ul>
+          </div>
+        )}
+
+        {/* Architecture */}
+        {project.architectureImage && (
+          <div className="project-details__section">
+            <h2>Architecture</h2>
+
+            <img
+              src={project.architectureImage}
+              alt={`${project.title} architecture`}
+              className="project-details__architecture-image"
+            />
+          </div>
+        )}
+
+        {/* Screenshots */}
+        {project.screenshots && (
+          <div className="project-details__section">
+            <h2>Screenshots</h2>
+
+            <div className="project-details__gallery">
+              {project.screenshots.map((image) => (
+                <img key={image} src={image} alt={`${project.title} screenshot`} />
+              ))}
+            </div>
           </div>
         )}
 
