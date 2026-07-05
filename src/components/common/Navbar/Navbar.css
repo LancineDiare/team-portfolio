@@ -150,26 +150,150 @@ Responsive
 */
 
 @media (max-width: 900px) {
-
   .navbar__inner {
     flex-wrap: wrap;
-
     padding: 14px 0;
   }
 
+  .navbar__menu-button {
+    display: block;
+    margin-left: auto;
+  }
+
   .navbar__links {
-    order: 3;
+    display: none;
+
+    order: 4;
 
     width: 100%;
 
-    overflow-x: auto;
+    flex-direction: column;
+    align-items: flex-start;
 
-    padding-bottom: 8px;
+    padding: 16px 0;
 
-    scrollbar-width: thin;
+    border-top: 1px solid var(--border-color);
+  }
+
+  .navbar__links--open {
+    display: flex;
+  }
+
+  .navbar__link {
+    width: 100%;
+
+    padding: 10px 0;
+  }
+
+  .navbar__link.active::after {
+    display: none;
   }
 
   .navbar__actions {
+    order: 3;
+    width: 100%;
+
+    justify-content: flex-start;
+  }
+}
+
+
+/*
+========================================
+Mobile Menu Button
+========================================
+*/
+
+.navbar__menu-button {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+
+  background: var(--surface-color);
+
+  cursor: pointer;
+}
+
+.navbar__menu-button span {
+  display: block;
+
+  width: 20px;
+  height: 2px;
+
+  margin: 4px auto;
+
+  background: var(--text-color);
+
+  border-radius: 999px;
+}
+
+
+/*
+========================================
+Mobile Navigation Fix
+========================================
+*/
+
+.navbar__menu-button {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .navbar__menu-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+
+    width: 44px;
+    height: 44px;
+
     margin-left: auto;
+
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+  }
+
+  .navbar__menu-button span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text-color);
+    border-radius: 999px;
+  }
+
+  .navbar__links {
+    display: none;
+    order: 4;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 0;
+    border-top: 1px solid var(--border-color);
+  }
+
+  .navbar__links--open {
+    display: flex;
+  }
+
+  .navbar__link {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .navbar__link.active::after {
+    display: none;
+  }
+
+  .navbar__actions {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
   }
 }
