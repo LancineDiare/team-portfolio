@@ -14,7 +14,7 @@ function ProjectCard({ project }) {
   const { t } = useTranslation();
 
   return (
-    <article className="project-card">
+    <article className="project-card slide-up">
       {/* Project Category */}
       <span className="project-card__category">{project.category}</span>
 

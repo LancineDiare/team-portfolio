@@ -1,63 +1,299 @@
+/*
+========================================
+Navbar Component
+========================================
+*/
+
 .navbar {
-  background: var(--white);
-  border-bottom: 1px solid var(--gray-200);
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: 1000;
+
+  background: var(--surface-color);
+
+  border-bottom: 1px solid var(--border-color);
+
+  box-shadow: var(--shadow-soft);
+
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
+
+/*
+========================================
+Navbar Layout
+========================================
+*/
 
 .navbar__inner {
   min-height: 72px;
+
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  align-items: center;
+
+  gap: 20px;
 }
+
+/*
+========================================
+Brand
+========================================
+*/
 
 .navbar__brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+
   font-weight: 800;
+  font-size: 1.2rem;
+
+  color: var(--text-color);
+
+  transition: color 0.3s ease;
+}
+
+.navbar__brand:hover {
+  color: var(--primary-green);
 }
 
 .navbar__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 58px;
+  height: 42px;
+
+  padding: 0 16px;
+
+  border-radius: var(--radius-md);
+
   background: linear-gradient(
     135deg,
     var(--primary-green),
     var(--accent-gold)
   );
-  color: var(--white);
-  padding: 8px 10px;
-  border-radius: var(--radius-md);
+
+  color: #FFFFFF;
+
+  font-weight: 800;
+  letter-spacing: 1px;
 }
+
+/*
+========================================
+Navigation Links
+========================================
+*/
 
 .navbar__links {
   display: flex;
-  gap: 18px;
   align-items: center;
+  gap: 20px;
 }
 
 .navbar__link {
+  position: relative;
+
   font-weight: 600;
-  color: var(--gray-500);
+
+  color: var(--muted-text-color);
+
+  transition:
+    color 0.25s ease;
 }
 
-.navbar__link.active,
 .navbar__link:hover {
   color: var(--primary-green);
 }
 
+.navbar__link.active {
+  color: var(--primary-green);
+}
+
+.navbar__link.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -6px;
+
+  width: 100%;
+  height: 2px;
+
+  background: var(--primary-green);
+
+  border-radius: 999px;
+}
+
+/*
+========================================
+Navbar Actions
+========================================
+*/
+
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/*
+========================================
+Responsive
+========================================
+*/
+
 @media (max-width: 900px) {
   .navbar__inner {
     flex-wrap: wrap;
-    padding: 12px 0;
+    padding: 14px 0;
+  }
+
+  .navbar__menu-button {
+    display: block;
+    margin-left: auto;
   }
 
   .navbar__links {
+    display: none;
+
+    order: 4;
+
+    width: 100%;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 16px 0;
+
+    border-top: 1px solid var(--border-color);
+  }
+
+  .navbar__links--open {
+    display: flex;
+  }
+
+  .navbar__link {
+    width: 100%;
+
+    padding: 10px 0;
+  }
+
+  .navbar__link.active::after {
+    display: none;
+  }
+
+  .navbar__actions {
     order: 3;
     width: 100%;
-    overflow-x: auto;
-    padding-bottom: 8px;
+
+    justify-content: flex-start;
+  }
+}
+
+
+/*
+========================================
+Mobile Menu Button
+========================================
+*/
+
+.navbar__menu-button {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+
+  background: var(--surface-color);
+
+  cursor: pointer;
+}
+
+.navbar__menu-button span {
+  display: block;
+
+  width: 20px;
+  height: 2px;
+
+  margin: 4px auto;
+
+  background: var(--text-color);
+
+  border-radius: 999px;
+}
+
+
+/*
+========================================
+Mobile Navigation Fix
+========================================
+*/
+
+.navbar__menu-button {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .navbar__menu-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+
+    width: 44px;
+    height: 44px;
+
+    margin-left: auto;
+
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+  }
+
+  .navbar__menu-button span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text-color);
+    border-radius: 999px;
+  }
+
+  .navbar__links {
+    display: none;
+    order: 4;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 0;
+    border-top: 1px solid var(--border-color);
+  }
+
+  .navbar__links--open {
+    display: flex;
+  }
+
+  .navbar__link {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .navbar__link.active::after {
+    display: none;
+  }
+
+  .navbar__actions {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
   }
 }
