@@ -300,3 +300,42 @@ Responsive
     align-items: flex-start;
   }
 }
+
+
+/*
+========================================
+Certification Status and Links
+========================================
+*/
+
+.member-profile__certification-status {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  padding: 6px 12px;
+
+  border-radius: 999px;
+
+  background: rgba(11, 110, 79, 0.12);
+
+  color: var(--primary-green);
+
+  font-weight: 800;
+  font-size: 0.85rem;
+}
+
+.member-profile__certification-links {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 14px;
+
+  margin-top: 14px;
+}
+
+.member-profile__certification-links a {
+  color: var(--primary-green);
+
+  font-weight: 700;
+}
