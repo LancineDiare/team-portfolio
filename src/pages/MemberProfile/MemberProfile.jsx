@@ -11,6 +11,7 @@ import { skills } from "../../data/skills";
 import { certifications } from "../../data/certifications";
 import { timeline } from "../../data/timeline";
 import { individualProjects } from "../../data/individualProjects";
+import { experiences } from "../../data/experiences";
 
 import "./MemberProfile.css";
 
@@ -19,6 +20,9 @@ function MemberProfile() {
 
   // Find selected member from URL parameter
   const member = members.find((item) => item.id === memberId);
+
+  const memberExperiences = experiences.filter(
+  (experience) => experience.ownerId === memberId);
 
   // Prevent blank page if member does not exist
   if (!member) {
@@ -153,7 +157,7 @@ const memberProjects = individualProjects.filter(
             <p>No certifications added yet.</p>
           )}
         </div>
-        
+
         {/* Individual Projects */}
         <div className="member-profile__section">
           <h2>Individual Projects</h2>
@@ -174,6 +178,34 @@ const memberProjects = individualProjects.filter(
             </div>
           ) : (
             <p>No individual projects added yet.</p>
+          )}
+        </div>
+
+        {/* Experience Timeline */}
+        <div className="member-profile__section">
+          <h2>Experience Timeline</h2>
+
+          {memberExperiences.length > 0 ? (
+            <div className="member-profile__timeline">
+              {memberExperiences.map((experience) => (
+                <article
+                  className="member-profile__timeline-item"
+                  key={`${experience.title}-${experience.period}`}
+                >
+                  <span>{experience.period}</span>
+                  <h3>{experience.title}</h3>
+                  <p className="member-profile__timeline-type">
+                    {experience.type}
+                  </p>
+                  <p>
+                    <strong>{experience.organization}</strong>
+                  </p>
+                  <p>{experience.description}</p>
+                </article>
+              ))}
+            </div>
+          ) : (
+            <p>No experience timeline added yet.</p>
           )}
         </div>
 
