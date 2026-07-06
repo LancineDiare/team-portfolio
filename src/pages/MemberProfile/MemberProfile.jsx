@@ -115,11 +115,37 @@ const memberProjects = individualProjects.filter(
                   className="member-profile__certification-card"
                   key={certification.title}
                 >
-                  <h3>{certification.title}</h3>
-                  <p>{certification.issuer}</p>
-                  <p>{certification.date}</p>
+                  <span className="member-profile__certification-status">
+                    {certification.status}
+                  </span>
 
-                  <a href={certification.credentialUrl}>View Credential</a>
+                  <h3>{certification.title}</h3>
+
+                  <p>
+                    <strong>Issuer:</strong> {certification.issuer}
+                  </p>
+
+                  <p>
+                    <strong>Date:</strong> {certification.date}
+                  </p>
+
+                  <p>
+                    <strong>Category:</strong> {certification.category}
+                  </p>
+
+                  <div className="member-profile__certification-links">
+                    <a href={certification.credentialUrl}>
+                      View Credential
+                    </a>
+
+                    <a
+                      href={certification.certificateFile}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Open Certificate
+                    </a>
+                  </div>
                 </article>
               ))}
             </div>
@@ -127,7 +153,7 @@ const memberProjects = individualProjects.filter(
             <p>No certifications added yet.</p>
           )}
         </div>
-
+        
         {/* Individual Projects */}
         <div className="member-profile__section">
           <h2>Individual Projects</h2>
