@@ -3,26 +3,41 @@
  *
  * Application layout containing:
  * - Navbar
- * - Routes
+ * - Lazy-loaded routes
  * - Footer
  * - Debug Panel
  */
 
+import { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import Navbar from "../../common/Navbar/Navbar";
 import Footer from "../../common/Footer/Footer";
 import DebugPanel from "../../common/DebugPanel/DebugPanel";
+import LoadingSpinner from "../../common/LoadingSpinner/LoadingSpinner";
 
-import Home from "../../../pages/Home/Home";
-import AboutUs from "../../../pages/AboutUs/AboutUs";
-import Members from "../../../pages/Members/Members";
-import CommonProjects from "../../../pages/CommonProjects/CommonProjects";
-import IndividualProjects from "../../../pages/IndividualProjects/IndividualProjects";
-import Contact from "../../../pages/Contact/Contact";
-
-import MemberProfile from "../../../pages/MemberProfile/MemberProfile";
-import ProjectDetails from "../../../pages/ProjectDetails/ProjectDetails";
+/**
+ * Lazy-loaded pages
+ *
+ * Pages are loaded only when visited.
+ * This improves initial loading performance.
+ */
+const Home = lazy(() => import("../../../pages/Home/Home"));
+const AboutUs = lazy(() => import("../../../pages/AboutUs/AboutUs"));
+const Members = lazy(() => import("../../../pages/Members/Members"));
+const CommonProjects = lazy(() =>
+  import("../../../pages/CommonProjects/CommonProjects")
+);
+const IndividualProjects = lazy(() =>
+  import("../../../pages/IndividualProjects/IndividualProjects")
+);
+const Contact = lazy(() => import("../../../pages/Contact/Contact"));
+const MemberProfile = lazy(() =>
+  import("../../../pages/MemberProfile/MemberProfile")
+);
+const ProjectDetails = lazy(() =>
+  import("../../../pages/ProjectDetails/ProjectDetails")
+);
 
 function MainLayout() {
   return (
@@ -30,27 +45,23 @@ function MainLayout() {
       <Navbar />
 
       <main className="fade-in">
-        <Routes>
-          {/* Main Pages */}
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/members" element={<Members />} />
-          <Route path="/common-projects" element={<CommonProjects />} />
-          <Route path="/individual-projects" element={<IndividualProjects />} />
-          <Route path="/contact" element={<Contact />} />
+        <Suspense fallback={<LoadingSpinner text="Loading page..." />}>
+          <Routes>
+            {/* Main Pages */}
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/members" element={<Members />} />
+            <Route path="/common-projects" element={<CommonProjects />} />
+            <Route path="/individual-projects" element={<IndividualProjects />} />
+            <Route path="/contact" element={<Contact />} />
 
-          {/* Dynamic Member Pages */}
-          <Route
-            path="/members/:memberId"
-            element={<MemberProfile />}
-          />
+            {/* Dynamic Member Pages */}
+            <Route path="/members/:memberId" element={<MemberProfile />} />
 
-          {/* Dynamic Project Pages */}
-          <Route
-            path="/projects/:projectId"
-            element={<ProjectDetails />}
-          />
-        </Routes>
+            {/* Dynamic Project Pages */}
+            <Route path="/projects/:projectId" element={<ProjectDetails />} />
+          </Routes>
+        </Suspense>
       </main>
 
       <DebugPanel />
