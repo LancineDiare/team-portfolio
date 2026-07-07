@@ -16,6 +16,7 @@ import Footer from "../../common/Footer/Footer";
 import DebugPanel from "../../common/DebugPanel/DebugPanel";
 import LoadingSpinner from "../../common/LoadingSpinner/LoadingSpinner";
 
+
 /**
  * Lazy-loaded pages
  *
@@ -39,6 +40,10 @@ const ProjectDetails = lazy(() =>
   import("../../../pages/ProjectDetails/ProjectDetails")
 );
 
+const NotFound = lazy(() =>
+    import("../../../pages/NotFound/NotFound")
+);
+
 function MainLayout() {
   return (
     <>
@@ -60,6 +65,9 @@ function MainLayout() {
 
             {/* Dynamic Project Pages */}
             <Route path="/projects/:projectId" element={<ProjectDetails />} />
+
+            <Route path="*"element={<NotFound />}/>
+
           </Routes>
         </Suspense>
       </main>
