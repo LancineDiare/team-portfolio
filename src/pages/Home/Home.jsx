@@ -1,13 +1,14 @@
 /**
  * Home Page
  *
- * Professional landing page for the BSIT Team Portfolio.
+ * Professional landing page for the TriTechPlus Team Portfolio.
  */
-import LoadingSpinner from "../../components/common/LoadingSpinner/LoadingSpinner";
-import Skeleton from "../../components/common/Skeleton/Skeleton";
 
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+
+import SEO from "../../components/common/SEO/SEO";
+import LoadingSpinner from "../../components/common/LoadingSpinner/LoadingSpinner";
 
 import Hero from "../../components/common/Hero/Hero";
 import MemberCard from "../../components/cards/MemberCard/MemberCard";
@@ -22,10 +23,7 @@ import "./Home.css";
 function Home() {
   const { t } = useTranslation();
 
-  const featuredProjects = [
-    ...commonProjects,
-    ...individualProjects,
-  ];
+  const featuredProjects = [...commonProjects, ...individualProjects];
 
   const stats = [
     { value: "5", label: "Team Members" },
@@ -53,6 +51,11 @@ function Home() {
 
   return (
     <>
+      <SEO
+        title="TriTechPlus Team Portfolio"
+        description="A multilingual portfolio showcasing TriTechPlus team members, projects, skills, and software development experience."
+      />
+
       <Hero />
 
       {/* Team Statistics */}
@@ -78,9 +81,7 @@ function Home() {
               <p>{t("home.featuredProjectsDescription")}</p>
             </div>
 
-            <Link to="/individual-projects">
-              {t("home.viewAllProjects")}
-            </Link>
+            <Link to="/individual-projects">{t("home.viewAllProjects")}</Link>
           </div>
 
           <div className="home-grid">
@@ -98,7 +99,8 @@ function Home() {
             <div>
               <h2>Technologies We Use</h2>
               <p>
-                Tools and technologies used across our academic and personal projects.
+                Tools and technologies used across our academic and personal
+                projects.
               </p>
             </div>
           </div>
@@ -136,7 +138,8 @@ function Home() {
         <div className="container home-cta__content">
           <h2>Building. Learning. Improving.</h2>
           <p>
-            This portfolio is part of our continuous journey toward production-ready software development.
+            This portfolio is part of our continuous journey toward
+            production-ready software development.
           </p>
 
           <Link to="/contact">Contact the Team</Link>
