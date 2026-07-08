@@ -6,6 +6,8 @@
 
 import { useTranslation } from "react-i18next";
 
+import SEO from "../../components/common/SEO/SEO";
+
 import { commonProjects } from "../../data/commonProjects";
 import ProjectCard from "../../components/cards/ProjectCard/ProjectCard";
 
@@ -20,6 +22,11 @@ function CommonProjects() {
         {/* Page Header */}
         <h1>{t("pages.commonProjects.title")}</h1>
         <p>{t("pages.commonProjects.description")}</p>
+
+        <SEO
+            title="Common Projects | TriTechPlus Team Portfolio"
+            description="Explore common team projects developed by TriTechPlus, including Master Guesser, ChikaMo, and Pathfinder AI."
+          />
 
         {/* Common Projects Grid */}
         <div className="projects-grid">

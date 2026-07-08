@@ -6,6 +6,8 @@
 
 import { useTranslation } from "react-i18next";
 
+import SEO from "../../components/common/SEO/SEO";
+
 import { members } from "../../data/members";
 import MemberCard from "../../components/cards/MemberCard/MemberCard";
 
@@ -20,6 +22,11 @@ function Members() {
         {/* Page Header */}
         <h1>{t("pages.members.title")}</h1>
         <p>{t("pages.members.description")}</p>
+
+        <SEO
+          title="Team Members | TriTechPlus Team Portfolio"
+          description="Meet the TriTechPlus team members and explore their skills, profiles, and projects."
+        />
 
         {/* Team Members Grid */}
         <div className="members-grid">

@@ -8,6 +8,8 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
+import SEO from "../../components/common/SEO/SEO";
+
 import "./Contact.css";
 
 function Contact() {
@@ -68,6 +70,11 @@ function Contact() {
           <h1>{t("pages.contact.title")}</h1>
           <p>{t("pages.contact.description")}</p>
         </div>
+
+        <SEO
+          title="Contact | TriTechPlus Team Portfolio"
+          description="Contact the TriTechPlus team for collaboration, portfolio inquiries, and software development opportunities."
+        />
 
         <form className="contact-form" onSubmit={handleSubmit}>
           <div className="contact-form__group">
